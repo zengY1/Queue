@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>hello</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>队列</h1>
+    <h2>基本队列</h2>
+    <div>
+        队列列表：
+        <span id="domo"></span>
+    </div>
+    <div>
+        <form action="" name="add">
+        输入添加的队列：
+        <input type="text" id='input'/>
+        <input type="button" onclick="addQueue()" value="提交"/>
+        </form>
+    </div>
+    <div>
+        出栈值：
+        <span id="out"></span>
+    </div>
+    <div>
+        <form action="" name="select">
+        输入查询：
+        <input type="number" id='select'/>
+        <input type="button" onclick="queueSelect()" value="查询"/>
+        </form>
+        查询的队列：<span id="selectTag"></span>
+    </div>
+    <div>
+        是否为空队列：<span id="empty"></span>
+    </div>
+    <div>
+        队列的长度:
+        <span id="length"></span>
+    </div>
+    <button onclick="queuePrint()">队列列表</button>
+    <button onclick="queueOut()">出栈</button>
+    <button onclick="queueIsEmpty()">是否为空队列</button>
+    <button onclick="queueSize()">长度</button>
+    <div>
+        <h2>循环队列</h2>
+        <div>
+            队列列表：
+            <span id="list"></span>
+        </div>
+        <div>
+            Winner：
+            <span id="winner"></span>
+        </div>
+        <button onclick="looserPrint()">失败列表</button>
+        <button onclick="changeNum()">change</button>
+    </div>
+    <script src="./queue.js"></script>
+    <script src="./forQueue.js"></script>
+</body>
+</html>
