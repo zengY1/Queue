@@ -30,7 +30,7 @@ function forQueue(nameList,num){
             queue.addQueue(queue.outQueue())
         }
         outQueueData=queue.outQueue();
-        console.log('失败者'+outQueueData)
+        console.log('失败者：'+outQueueData)
         losser.push(outQueueData)
     }
     //返回最终队列的值
@@ -55,7 +55,7 @@ function changeNum(){
 function begin(){
     var winner=forQueue(nameList,num);
     console.log("m："+num);
-    console.log('胜利者'+winner);
+    console.log('胜利者：'+winner);
     document.getElementById('winner').innerHTML=winner;
   }
   //looser列表

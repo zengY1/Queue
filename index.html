@@ -5,8 +5,16 @@
     <title>hello</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .margin{
+            margin: 0 15%;
+        }
+        span{
+            color: red;
+        }
+    </style>
 </head>
-<body>
+<body class="margin">
     <h1>队列</h1>
     <h2>基本队列</h2>
     <div>
@@ -51,11 +59,12 @@
                 已知n个人（以编号1，2，3...n分别表示）围坐在一张圆桌周围。从编号为k的人开始报数，数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依此规律重复下去，直到圆桌周围的人全部出列。
             </div>
         </div><br/>
+        <div>默认的队列列表：['one','two','three','four','fine','six','server']</div><br/>
         <div>
             队列列表(1,2...n)：
             <span id="list"></span>
         </div>
-        <div>循环的次数(m)(1-30)：
+        <div>循环的次数(m)(0-30)：
             <span id="num"></span>
         </div>
         <div>
