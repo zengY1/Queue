@@ -46,15 +46,37 @@
     <div>
         <h2>循环队列</h2>
         <div>
-            队列列表：
+                约瑟夫环（约瑟夫问题）是一个数学的应用问题：(击鼓传花问题)
+            <div>
+                已知n个人（以编号1，2，3...n分别表示）围坐在一张圆桌周围。从编号为k的人开始报数，数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依此规律重复下去，直到圆桌周围的人全部出列。
+            </div>
+        </div><br/>
+        <div>
+            队列列表(1,2...n)：
             <span id="list"></span>
+        </div>
+        <div>循环的次数(m)(1-30)：
+            <span id="num"></span>
         </div>
         <div>
             Winner：
             <span id="winner"></span>
         </div>
+        <div>
+            失败者列表：
+            <span id="looser"></span>
+        </div>
+        <div>
+                <form action="" name="add">
+                输入添加的队列：
+                <input type="text" id='inputData'/>
+                <input type="button" onclick="addList()" value="提交"/>
+                </form>
+        </div><br/>
+        <button onclick="list()">队列列表</button>
+        <button onclick="changeNum()">随机m值</button>
+        <button onclick="begin()">开始</button>
         <button onclick="looserPrint()">失败列表</button>
-        <button onclick="changeNum()">change</button>
     </div>
     <script src="./queue.js"></script>
     <script src="./forQueue.js"></script>

@@ -40,16 +40,33 @@ function forQueue(nameList,num){
 var nameList=['one','two','three','four','fine','six','server'];
 var losser=[];
 var num =0;
-//looser列表
-function looserPrint(){
-    var data=losser.toString();
-    document.getElementById('list').innerHTML=data;
+//list队列列表
+function list(){
+    var queueList=nameList.toString();
+    document.getElementById('list').innerHTML=queueList;
 }
 //随机改变队列循环的次数
 function changeNum(){
-  num=Math.floor(Math.random()*100);
-  console.log(num)
-  var winner=forQueue(nameList,num)
-  console.log('胜利者'+winner);
-  document.getElementById('winner').innerHTML=winner;
+    num=Math.floor(Math.random()*30);
+    console.log("m："+num);
+    document.getElementById('num').innerHTML=num;
+}
+//开始
+function begin(){
+    var winner=forQueue(nameList,num);
+    console.log("m："+num);
+    console.log('胜利者'+winner);
+    document.getElementById('winner').innerHTML=winner;
+  }
+  //looser列表
+function looserPrint(){
+    var data=losser.toString();
+    document.getElementById('looser').innerHTML=data;
+}
+//添加n的数据
+function addList(){
+    var data=document.getElementById('inputData').value;
+    nameList.push(data);
+    var queueList=nameList.toString();
+    document.getElementById('list').innerHTML=queueList;
 }
